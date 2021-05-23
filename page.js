@@ -2,12 +2,12 @@ let pageNumber = 0
 
 const pages = [
 
-    "brooklyn design",
-    "kanye west",
-    "october",
-    "download my pdf"
-]
+  { copy: " a Brooklyn-based graphic designer"} ,
+  { copy: "Kanye West's biggest fan"},
+  { copy: " looking for a job at the start of October"},
+  { copy: 'letting you <a href="pdf.pdf">download her PDF</a>' }
 
+]
 const nextTag = document.querySelector("footer img.next")
 const ouputTag = document.querySelector("h2")
 const previousTag = document.querySelector("footer img.prev")
@@ -33,7 +33,7 @@ if(pageNumber > pages.length -1){
 
 const updateSection = function(){
 
-    ouputTag.innerHTML = pages[pageNumber]
+    ouputTag.innerHTML = pages[pageNumber].copy
 
 }
 
