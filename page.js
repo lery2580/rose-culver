@@ -2,16 +2,17 @@ let pageNumber = 0
 
 const pages = [
 
-  { copy: " a Brooklyn-based graphic designer"} ,
-  { copy: "Kanye West's biggest fan"},
-  { copy: " looking for a job at the start of October"},
+  { copy: " a Brooklyn-based graphic designer", background:"#edc7a9", circle:"#3e78ed"} ,
+  { copy: "Kanye West's biggest fan", background:"#a1fffe", circle:"#e34a47"},
+  { copy: " looking for a job at the start of October", background:"#d3c7f3", circle:"#f7fe00"},
   { copy: 'letting you <a href="pdf.pdf">download her PDF</a>' }
 
 ]
 const nextTag = document.querySelector("footer img.next")
 const ouputTag = document.querySelector("h2")
 const previousTag = document.querySelector("footer img.prev")
-
+const circleTag = document.querySelector("section div.circle")
+const bodyTag = document.querySelector("body")
 
 const previous = function(){
     pageNumber = pageNumber -1
@@ -34,6 +35,8 @@ if(pageNumber > pages.length -1){
 const updateSection = function(){
 
     ouputTag.innerHTML = pages[pageNumber].copy
+    circleTag.style.backgroundColor = pages[pageNumber].circle
+    bodyTag.style.backgroundColor = pages[pageNumber].background
 
 }
 
