@@ -54,4 +54,10 @@ footer{
 
 footer img{
     margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+section a{
+    color: #000;
+    text-decoration: none;
 }
